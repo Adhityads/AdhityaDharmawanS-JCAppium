@@ -38,28 +38,42 @@ public class TestCalculator {
     @Test
     public void testAdd() {
         calculator.calcAdd();
-        System.out.println("Hasil = "+calculator.getTxtResult());
+        System.out.println("Hasil Penjumlahan = "+calculator.getTxtResult());
         Assert.assertEquals(calculator.getTxtResult(), "3");
     }
 
     @Test
     public void testSub(){
         calculator.calcSub();
-        System.out.println("Hasil = "+calculator.getTxtResult());
+        System.out.println("Hasil Pengurangan = "+calculator.getTxtResult());
         Assert.assertEquals(calculator.getTxtResult(),"2");
+    }
+
+    @Test
+    public void testSubMinus(){
+        calculator.calcSubMinus();
+        System.out.println("Hasil Pengurangan Munus = "+calculator.getTxtResult());
+        String actual = calculator.getTxtResult();
+        char charActual = actual.charAt(0);
+        int cekASCII = (int) charActual;
+        System.out.println(cekASCII);
+        int cekASCIIFromKeyboardMinus = '-';
+        System.out.println(cekASCIIFromKeyboardMinus);
+        Assert.assertEquals(actual, "−2");;
+
     }
 
     @Test
     public void testMul(){
         calculator.calcMul();
-        System.out.println("Hasil = "+calculator.getTxtResult());
+        System.out.println("Hasil Perkalian = "+calculator.getTxtResult());
         Assert.assertEquals(calculator.getTxtResult(),"12");
     }
 
     @Test
     public void testDiv(){
         calculator.calcDiv();
-        System.out.println("Hasil = "+calculator.getTxtResult());
+        System.out.println("Hasil Pembagian = "+calculator.getTxtResult());
         Assert.assertEquals(calculator.getTxtResult(),"4");
     }
 

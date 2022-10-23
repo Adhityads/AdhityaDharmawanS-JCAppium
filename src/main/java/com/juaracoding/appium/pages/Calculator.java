@@ -64,6 +64,13 @@ public class Calculator {
 
     }
 
+    public void calcSubMinus(){
+        btnTujuh.click();
+        btnKurang.click();
+        btnSembilan.click();
+        btnSamaDengan.click();
+    }
+
     public void calcMul(){
         btnTiga.click();
         btnKali.click();
